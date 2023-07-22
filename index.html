@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diana Navarrete</title>
+    <title> Diana Navarrete</title>
 
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -14,18 +14,21 @@
       <figure>
         <img
           class="logo"
-          src="https://static.wixstatic.com/media/2e1127_8c3e288aff484485a9487e356817f1f8~mv2.png"
+          src="img/LOGO.png"
           alt="Logo"
         />
       </figure>
-
-      <nav>
-        <ul id="menu-items">
-          <li class="menuencabezado"><a href="#Inicio"> Inicio</a></li>
-          <li class="menuencabezado"><a href="#Contacto"> Contacto</a></li>
+   
+      <div class="icono" id="icono">
+        <img src="img/hamburguesa.png" alt="hamburguesa">
+      </div>
+    
+      <nav class="nav active" id="menu" > 
+        <ul>
+          <li><a href="#Inicio"> Inicio</a></li>
+          <li><a href="#Contacto"> Contacto</a></li>
         </ul>
       </nav>
-      <hr />
     </header>
    
 
@@ -34,7 +37,7 @@
         <figure>
           <img
             id="Fotoperfil"
-            src="img/pexels-antoni-shkraba-4348078.jpg"
+            src="img/20180617_180548-1.jpg"
             alt="foto perfil"
           />
         </figure>
@@ -43,7 +46,7 @@
         <h1 id="Inicio">
           <a href="Inicio">Diana Navarrete</a> </h1>
 
-        <article>
+        <h2>
           Comunicadora social y periodista con estudios en Política Pública. Con
           diez años de experiencia en diferentes cargos de coordinación y/o
           asesoría en comunicación estratégica y medios, para organizaciones sin
@@ -52,7 +55,7 @@
           considero que la comunicación es una herramienta poderosa, persuasiva
           y transformadora, indispensable para la defensa y promoción de los
           Derechos Humanos.
-        </article>
+        </h2>
       </section>
 
       <section>
@@ -61,7 +64,7 @@
             download="Curriculum 2023"
             href="Documentos/CV_DIANA NAVARRETE_2023.pdf"
           >
-            Descargar mi Cv</a
+          <h3>Descargar CV </h3></a
           >
         </button>
       </section>
@@ -77,9 +80,9 @@
       </section>
 
       <section id="Contacto">
-        <p>
+        <h1>
           <a href="Contacto">Contacto</a>
-        </p>
+        </h1>
 
 <!-- Tengo inquietudes sobre el error que aparece con las anclas a la inversa, aún no comprendo porque al dar por ej encima de contacto en la sección, no me devuelve al menú sino que me arroja error -->
 
@@ -96,5 +99,7 @@
     </main>
 
     <footer><p>Código Latam</p></footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

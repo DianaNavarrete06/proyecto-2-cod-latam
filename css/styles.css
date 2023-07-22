@@ -1,55 +1,106 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,700&display=swap");
 
-/* Reset */
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
-  font-family: "Lato", serif;
-  /* Quise colocar el fondo del color señalado, pero me cubre todos los textos */
+  font-family: "Nunito Sans", sans-serif;
+  /* Quise colocar el fondo del color señalado, pero me cubre todos los textos y no logré dejar los fondos de los textos sin el color del fondo */
 }
 
 header {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: fixed;
-  height: 90px;
-  width: 100%;
-  background-color: #fbfbfb;
-  /* Le agregué fondo al header para que se viera esteticamente mejor */
+  height: 180px;
+  background-color: #7d2e1c;
 }
 
-.logo {
-  width: 170px;
-  margin-right: 1vh;
-  margin-left: 1vh;
+@media (max-width: 720px) {
+  .icono {
+    width: 40px;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    padding-top: 50px;
+  }
 }
 
-#menu-items {
-  display: flex;
-  flex-direction: row;
-  text-align: start;
-  justify-items: center;
-  font-size: 28px;
-  font-weight: 700px;
+@media (min-width: 720px) {
+  .icono {
+    display: none;
+  }
 }
 
-.menuencabezado {
-  margin: 2vh;
-  color: #0f0f0f;
+@media (min-width: 720px) {
+  .nav ul {
+    display: flex;
+    text-align: justify;
+    padding-top: 70px;
+    font-size: 40px;
+    color: #fdeedc;
+    gap: 4rem;
+    margin-left: 10vh;
+    list-style: none;
+  }
 }
 
-#Fotoperfil {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 400px;
-  border-radius: 600px;
-  padding-top: 100px;
+@media (max-width: 720px) {
+  .nav ul {
+    position: absolute;
+    text-align: justify;
+    top: 40px;
+    gap: 5rem;
+    margin-left: 4vh;
+    list-style: none;
+    transition: all 0, 5s ease-in-out;
+  }
+
+  .nav ul li {
+    font-size: 30px;
+    color: #f5d4ac;
+  }
+
+  .active {
+    transform: translate(-500px);
+  }
 }
-/* Quise que la imagen comenzará abajo del header, pero creo que por los valores por default queda ajustada arriba y solamente con padding logré ajustarla */
+
+@media (min-width: 720px) {
+  .logo {
+    width: 150px;
+    margin-right: 1vh;
+    margin-left: 7vh;
+  }
+}
+
+@media (max-width: 720px) {
+  .logo {
+    width: 170px;
+    margin-right: 1vh;
+    margin-left: 1vh;
+  }
+}
+
+@media (min-width: 720px) {
+  #Fotoperfil {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    border-radius: 1000px;
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 720px) {
+  #Fotoperfil {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    border-radius: 50px;
+    padding-top: 80px;
+  }
+}
 /* No pude centrar la imagen con propiedad flex, quisiera saber a que se debe */
 
 #Inicio {
@@ -60,34 +111,61 @@ header {
 }
 
 article {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 24px;
   text-align: center;
   line-height: 1.2;
+  color: #fff6f4;
 }
 
 button {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 400;
-  background-color: #af599e;
-  border-radius: 50px;
-  color: #fbfbfb;
+  background-color: #f1a661;
+  border-radius: 30px;
+  color: #fff6f4;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5vh;
   padding: 15px;
+  letter-spacing: 3px;
+  overflow: hidden;
+  transition: 0.2s;
 }
 
-#Hablemos {
-  font-size: 28px;
-  font-weight: 700;
-  text-align: center;
-  background-color: rgb(175, 89, 158, 0.3);
-  line-height: 1.2;
-  border-radius: 20px;
-  padding: 10px;
-  margin: 40px;
+button:hover {
+  cursor: pointer;
+  background-color: #7d2e1c;
+}
+
+@media (min-width: 1024px) {
+  #Hablemos {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #f1a661;
+    color: #fff6f4;
+    line-height: 1.2;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 40px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #Hablemos {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #f1a661;
+    color: #fff6f4;
+    line-height: 1.2;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 40px;
+    width: 100%;
+  }
 }
 
 #Contacto {
@@ -107,8 +185,8 @@ button {
 footer {
   display: flex;
   justify-content: center;
-  background-color: #af599e;
-  color: #fbfbfb;
+  background-color: #f1a661;
+  color: #fff6f4;
   font-size: 18px;
   height: 100%;
 }
@@ -118,12 +196,37 @@ p {
   justify-content: center;
   align-items: center;
 }
-/* Para quitar los puntos a los items de listas */
-ul {
-  list-style: none;
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 29px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.2;
+    color: #f1a661;
+    width: 100%;
+  }
 }
 
-/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 23px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.2;
+    color: #f1a661;
+    width: 100%;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.2;
+  color: #e38b29;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -131,24 +234,6 @@ a {
 
 main {
   max-width: 1200px;
-  min-height: 100vh
+  min-height: 100vh;
   margin: auto;
 }
-
-/* Recomendaciones! 
-*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
-*
-*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
-*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
-*
-*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
-*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
-*
-*  - Usen mucho las herramientas para desarrolladores del navegador para ir
-*    probando el CSS que escriben, resolver dudas y problemas.
-*
-*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
-*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
-*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
-*/
